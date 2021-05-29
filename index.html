@@ -13,7 +13,7 @@
     <title>neumorphism</title>
   </head>
   <body>
-    <div class="container flex justify_center align_center">
+    <div class="container flex justify_center align_center column">
       <div class="box" id="box">
         <lottie-player
           class="lottie"
@@ -26,7 +26,11 @@
         ></lottie-player>
       </div>
 
-      <div class="login_box" id="login_box" style="cursor: pointer">
+      <div
+        class="login_box flex justify_center align_center"
+        id="login_box"
+        style="cursor: pointer"
+      >
         <lottie-player
           src="https://assets8.lottiefiles.com/packages/lf20_w8x65f2d.json"
           background="transparent"
@@ -41,6 +45,18 @@
           style="font-size: 1.5rem; color: green"
         ></i>
       </div>
+
+      <!-- <div class="box box_2" id="box box_2">
+        <lottie-player
+          class="lottie"
+          src="https://assets1.lottiefiles.com/animated_stickers/lf_tgs_2jH2lZ.json"
+          background="transparent"
+          speed="1"
+          style="width: 80px; height: 80px"
+          loop
+          autoplay
+        ></lottie-player>
+      </div> -->
     </div>
   </body>
   <script src="confetti.js"></script>
@@ -50,8 +66,7 @@
       .addEventListener("click", (event) => {
         let login_box = document.getElementById("login_box");
         login_box.style.display = "block";
-        // login_box.style.width = "400px";
-        event.target.style.display = "none";
+        event.target.display = "none";
         confetti.toggle();
       });
 
@@ -75,6 +90,7 @@
         let login_box = document.getElementById("login_box");
         let anim_box = document.getElementById("box");
         login_box.style.display = "none";
+        login_box.classList.add("animate");
         anim_box.style.display = "block";
         anim_box.style.display = "flex";
         anim_box.style.justifyContent = "center";
