@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/stylesheet/style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://kit.fontawesome.com/17bbe460ec.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>neumorphism</title>
+  </head>
+  <body>
+    <div class="container flex justify_center align_center">
+      <div class="box" id="box">
+        <lottie-player
+          class="lottie"
+          src="https://assets1.lottiefiles.com/animated_stickers/lf_tgs_2jH2lZ.json"
+          background="transparent"
+          speed="1"
+          style="width: 80px; height: 80px"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+
+      <div class="login_box" id="login_box" style="cursor: pointer">
+        <lottie-player
+          src="https://assets8.lottiefiles.com/packages/lf20_w8x65f2d.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px; margin: 40px auto"
+          loop
+          autoplay
+        ></lottie-player>
+        <i
+          class="fas fa-backward"
+          id="cross"
+          style="font-size: 1.5rem; color: green"
+        ></i>
+      </div>
+    </div>
+  </body>
+  <script src="confetti.js"></script>
+  <script>
+    let anim_box = document
+      .getElementById("box")
+      .addEventListener("click", (event) => {
+        let login_box = document.getElementById("login_box");
+        login_box.style.display = "block";
+        // login_box.style.width = "400px";
+        event.target.style.display = "none";
+        confetti.toggle();
+      });
+
+    let login_box = document.getElementById("login_box");
+    login_box.addEventListener("click", (event) => {
+      anim_box.style.display = "block";
+      event.target.style.display = "none";
+    });
+
+    setInterval(function () {
+      confetti.stop();
+    }, 5000);
+
+    // setTimeout(function () {
+    //   confetti.stop();
+    // }, 3000);
+
+    let cross = document
+      .getElementById("cross")
+      .addEventListener("click", () => {
+        let login_box = document.getElementById("login_box");
+        let anim_box = document.getElementById("box");
+        login_box.style.display = "none";
+        anim_box.style.display = "block";
+        anim_box.style.display = "flex";
+        anim_box.style.justifyContent = "center";
+      });
+  </script>
+</html>

@@ -1,0 +1,56 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  width: 200px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 1.5s linear;
+  font-size: 3rem;
+  i {
+    color: red;
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+      -9px -9px 16px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  &:hover {
+    box-shadow: inset 9px 9px 16px rgba(163, 177, 198, 0.6),
+      inset -9px -9px 16px rgba(2555, 255, 255, 0.5);
+  }
+}
+
+body {
+  background: rgb(224, 229, 236);
+}
+
+// .login_box {
+//   width: 350px;
+//   height: 400px;
+//   display: none;
+//   cursor: pointer;
+//   #cross {
+//     font-size: 3rem;
+//   }
+
+//   box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+//     -9px -9px 16px rgba(255, 255, 255, 0.5);
+//   animation: anim 0.5s;
+//   &:hover {
+//     box-shadow: inset 9px 9px 16px rgba(163, 177, 198, 0.6),
+//       inset -9px -9px 16px rgba(2555, 255, 255, 0.5);
+//   }
+// }
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}

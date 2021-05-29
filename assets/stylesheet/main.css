@@ -1,0 +1,27 @@
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 6rem;
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+          box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  -webkit-transition: all 1.5s linear;
+  transition: all 1.5s linear;
+  border: 1px solid red;
+}
+
+body {
+  background: #e0e5ec;
+}
+/*# sourceMappingURL=main.css.map */
